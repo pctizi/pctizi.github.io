@@ -1,4 +1,4 @@
-# PC梯子 | 11月18日23M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐  更新时间 2025-11-18 11:54:22
+# PC梯子 | 11月23日21.9M/S|免费Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐  更新时间 2025-11-23 09:48:21
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://pctizi.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://pctizi.github.io/uploads/2025/11/0-20251118.yaml
-- https://pctizi.github.io/uploads/2025/11/1-20251118.yaml
-- https://pctizi.github.io/uploads/2025/11/2-20251118.yaml
-- https://pctizi.github.io/uploads/2025/11/3-20251118.yaml
-- https://pctizi.github.io/uploads/2025/11/4-20251118.yaml
+- https://pctizi.github.io/uploads/2025/11/0-20251123.yaml
+- https://pctizi.github.io/uploads/2025/11/1-20251123.yaml
+- https://pctizi.github.io/uploads/2025/11/2-20251123.yaml
+- https://pctizi.github.io/uploads/2025/11/3-20251123.yaml
+- https://pctizi.github.io/uploads/2025/11/4-20251123.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://pctizi.github.io/uploads/2025/11/0-20251118.txt
-- https://pctizi.github.io/uploads/2025/11/1-20251118.txt
-- https://pctizi.github.io/uploads/2025/11/2-20251118.txt
-- https://pctizi.github.io/uploads/2025/11/3-20251118.txt
-- https://pctizi.github.io/uploads/2025/11/4-20251118.txt
+- https://pctizi.github.io/uploads/2025/11/0-20251123.txt
+- https://pctizi.github.io/uploads/2025/11/1-20251123.txt
+- https://pctizi.github.io/uploads/2025/11/2-20251123.txt
+- https://pctizi.github.io/uploads/2025/11/3-20251123.txt
+- https://pctizi.github.io/uploads/2025/11/4-20251123.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://pctizi.github.io/uploads/2025/11/20251118.json
+- https://pctizi.github.io/uploads/2025/11/20251123.json
 
 ## 更多Clash节点订阅 ：
 
