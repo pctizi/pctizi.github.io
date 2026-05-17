@@ -377,14 +377,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
+    <div class="panel-heading"><h5>如何使用 Docker 部署 sing-box 或 v2ray？</h5></div>
     <div class="panel-body">
-        Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统全局代理有何区别？</h5></div>
-    <div class="panel-body">
-        TUN 模式直接拦截 IP 层流量，不依赖应用代理设置，系统全局代理通常只影响支持 HTTP/HTTPS 的程序。TUN 更适合全局科学上网和游戏环境。<hr />    </div>
+        选择官方或社区维护的 Docker 镜像，编写 docker-compose.yml 指定配置文件挂载、网络模式与端口映射。使用容器管理可以隔离运行环境、便于日志采集并与反向代理（如 Nginx）协同工作。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 的节点分组管理有哪些优势？</h5></div>
@@ -392,9 +387,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         节点分组可按用途、地区或延迟分类，结合策略组实现自动分流。方便用户管理大量节点，快速选择最佳节点，提高访问速度和连接稳定性，同时优化维护效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 支持按应用分流流量吗？</h5></div>
     <div class="panel-body">
-        支持。Surfboard 可通过策略组和规则文件将不同应用流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+        支持。Surfboard 可通过策略组和规则文件将不同应用的流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 全局代理与规则代理如何选择？</h5></div>
+    <div class="panel-body">
+        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，根据需求灵活选择模式。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLess 使用 XTLS 时证书怎么配置更安全？</h5></div>
@@ -402,19 +402,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         推荐使用可信 CA 签发的证书（例如 Let's Encrypt），并为服务器配置正确的域名、SNI 与证书链。避免使用自签名证书或错误域名，以免被客户端拒绝或被中间人攻击检测到。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何使用 Docker 部署 sing-box 或 v2ray？</h5></div>
+    <div class="panel-heading"><h5>Clash 的规则模式有哪些？</h5></div>
     <div class="panel-body">
-        选择官方或社区维护的 Docker 镜像，编写 docker-compose.yml 指定配置文件挂载、网络模式与端口映射。使用容器管理可以隔离运行环境、便于日志采集并与反向代理（如 Nginx）协同工作。<hr />    </div>
+        Clash 提供三种主要模式：Global（全局代理）、Rule（规则代理）和Direct（直连）。全局模式会让所有流量通过代理；规则模式根据规则文件自动分流；直连模式则完全不经过代理。用户可根据需求灵活切换。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 的伪装域名为什么重要？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 是否支持应用分流？</h5></div>
     <div class="panel-body">
-        伪装域名必须真实可访问且证书有效，以使流量看起来像普通 HTTPS 请求。正确配置可以降低被封锁和 DPI 检测风险，提高节点安全性和长期可用性。<hr />    </div>
+        支持。Surfboard 可通过策略组和规则文件将不同应用流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持按应用分流流量吗？</h5></div>
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统全局代理有何区别？</h5></div>
     <div class="panel-body">
-        支持。Surfboard 可通过策略组和规则文件将不同应用的流量分配到指定节点，保证游戏、视频和浏览器流量走最优节点，提高访问速度和网络稳定性。<hr />    </div>
+        TUN 模式直接拦截 IP 层流量，不依赖应用代理设置，系统全局代理通常只影响支持 HTTP/HTTPS 的程序。TUN 更适合全局科学上网和游戏环境。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名配置需要注意什么？</h5></div>
@@ -422,9 +422,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         伪装域名必须真实可访问并有有效证书，否则客户端无法建立连接。正确配置可隐藏真实流量特征，降低被封锁风险，保证节点长期稳定可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 全局代理与规则代理如何选择？</h5></div>
+    <div class="panel-heading"><h5>Trojan 的伪装域名为什么重要？</h5></div>
     <div class="panel-body">
-        全局代理会将所有流量通过节点转发，适合游戏或全局科学上网；规则代理只针对指定应用、IP 或端口走节点，可优化带宽使用和访问效率，根据需求灵活选择模式。    </div>
+        伪装域名必须真实可访问且证书有效，以使流量看起来像普通 HTTPS 请求。正确配置可以降低被封锁和 DPI 检测风险，提高节点安全性和长期可用性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -453,16 +453,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-10-free-subscribe-node.htm" title="PC梯子 | 4月10日20M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月10日20M/S|免费Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-28-clash-v2ray-ss-ssr.htm" title="PC梯子 | 4月28日20.1M/S|免费Trojan节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月28日20.1M/S|免费Trojan节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-21-clash-windows.htm" title="PC梯子 | 4月21日22.2M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月21日22.2M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-26-free-ssr-subscribe.htm" title="PC梯子 | 4月26日22.6M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月26日22.6M/S|免费Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-13-free-clash-subscribe.htm" title="PC梯子 | 4月13日18.7M/S|免费Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月13日18.7M/S|免费Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-23-node-share-links.htm" title="PC梯子 | 4月23日19.9M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月23日19.9M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-free-node-subscribe.htm" title="PC梯子 | 4月12日21.1M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月12日21.1M/S|免费Singbox节点/Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-4-14-node-share.htm" title="PC梯子 | 4月14日19.9M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月14日19.9M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-19-node-share-links.htm" title="PC梯子 | 4月19日21.7M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月19日21.7M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-18-free-ssr-subscribe.htm" title="PC梯子 | 4月18日22.5M/S|免费Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月18日22.5M/S|免费Trojan节点/SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-2-free-node-subscribe-links.htm" title="PC梯子 | 5月2日20M/S|免费Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 5月2日20M/S|免费Clash节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-15-free-v2ray.htm" title="PC梯子 | 4月15日19.5M/S|免费Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月15日19.5M/S|免费Trojan节点/V2ray节点/Clash节点/Singbox节点/SSR节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-29-clash-v2ray-ss-ssr.htm" title="PC梯子 | 4月29日20.8M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月29日20.8M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-5-node-share.htm" title="PC梯子 | 5月5日22.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 5月5日22.2M/S|免费Clash节点/Singbox节点/V2ray节点/Shadowrocket节点/Trojan节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-16-free-ssr-node.htm" title="PC梯子 | 4月16日20.3M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月16日20.3M/S|免费Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/SSR节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-20-clash-node-daily-updates.htm" title="PC梯子 | 4月20日20.1M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 4月20日20.1M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-7-free-ssr-subscribe.htm" title="PC梯子 | 5月7日22.3M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 5月7日22.3M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-11-free-v2ray.htm" title="PC梯子 | 5月11日20.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 5月11日20.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -474,10 +474,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">3</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">22</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
