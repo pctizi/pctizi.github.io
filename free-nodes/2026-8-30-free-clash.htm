@@ -374,31 +374,6 @@ sudo ufw </span><span><span class="hljs-built_in">disable</span></span><span>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 支持 Reality 吗？</h5></div>
-    <div class="panel-body">
-        支持。Hiddify Next 基于 sing-box 内核，可加载 Vless+Reality、Trojan+TLS 等高级协议配置。用户可直接导入机场订阅，无需手动修改复杂参数。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 的 XTLS 模式如何提升性能？</h5></div>
-    <div class="panel-body">
-        VLESS + XTLS 模式可以在加密传输中减少 TLS 握手和数据复制过程，从而显著降低延迟并减少 CPU 占用。这种优化特别适合高带宽或高并发的场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何给 Clash 或 Sing-box 添加本地广告屏蔽规则？</h5></div>
-    <div class="panel-body">
-        可导入公共广告域名列表（如 ads、trackers）并将其指向 `REJECT` 或 `DIRECT`（根据需求）；还可以使用 rule-provider 自动更新广告规则，并结合 hosts 或 DNS 层面进行联合拦截以提升屏蔽效果。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 无法代理游戏怎么办？</h5></div>
-    <div class="panel-body">
-        若 Netch 无法代理游戏，需检查游戏进程是否被正确捕获，以及防火墙是否阻止了 TUN 模式。可尝试以管理员身份运行程序，或切换为 Socks 模式重新导入节点。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 相比 Clash Premium 有哪些改进？</h5></div>
-    <div class="panel-body">
-        Mihomo 作为 Clash Premium 的开源替代品，移除了闭源依赖并优化了内存管理。它支持更多自定义规则和插件扩展，对开发者更友好，同时保持与 Clash 配置完全兼容。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 如何实现按端口和协议分流？</h5></div>
     <div class="panel-body">
         QuantumultX 支持按 TCP、UDP、端口及应用协议分流流量，结合策略组选择最优节点。可为游戏、视频和广告屏蔽提供最佳网络体验，提高访问速度和稳定性。<hr />    </div>
@@ -414,14 +389,39 @@ sudo ufw </span><span><span class="hljs-built_in">disable</span></span><span>
         可通过 systemd 创建启动项或在启动脚本中添加 V2RayA 启动命令。编辑 /etc/systemd/system/v2raya.service 文件并设置 `Restart=always`，执行 `systemctl enable v2raya` 使其随系统自动启动。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>如何给 Clash 或 Sing-box 添加本地广告屏蔽规则？</h5></div>
+    <div class="panel-body">
+        可导入公共广告域名列表（如 ads、trackers）并将其指向 `REJECT` 或 `DIRECT`（根据需求）；还可以使用 rule-provider 自动更新广告规则，并结合 hosts 或 DNS 层面进行联合拦截以提升屏蔽效果。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 的 XTLS 模式如何提升性能？</h5></div>
+    <div class="panel-body">
+        VLESS + XTLS 模式可以在加密传输中减少 TLS 握手和数据复制过程，从而显著降低延迟并减少 CPU 占用。这种优化特别适合高带宽或高并发的场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 与 Nekobox 有什么区别？</h5></div>
     <div class="panel-body">
         Nekoray 是基于 sing-box 的多平台代理客户端，支持 Windows、Linux 等系统；而 Nekobox 则是为 Android 设计的移动版本。两者共享相同的核心逻辑，均支持 VMess、VLess、Trojan 等协议，适合跨设备同步使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 支持 Reality 吗？</h5></div>
+    <div class="panel-body">
+        支持。Hiddify Next 基于 sing-box 内核，可加载 Vless+Reality、Trojan+TLS 等高级协议配置。用户可直接导入机场订阅，无需手动修改复杂参数。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 支持按 IP 段分流吗？</h5></div>
     <div class="panel-body">
-        支持。Sing-box 可根据 IP 段将国内流量直连，国外流量走代理，结合策略组实现智能分流。这样可保证访问速度和稳定性，同时优化节点使用效率，提高网络体验。    </div>
+        支持。Sing-box 可根据 IP 段将国内流量直连，国外流量走代理，结合策略组实现智能分流。这样可保证访问速度和稳定性，同时优化节点使用效率，提高网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Netch 无法代理游戏怎么办？</h5></div>
+    <div class="panel-body">
+        若 Netch 无法代理游戏，需检查游戏进程是否被正确捕获，以及防火墙是否阻止了 TUN 模式。可尝试以管理员身份运行程序，或切换为 Socks 模式重新导入节点。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 相比 Clash Premium 有哪些改进？</h5></div>
+    <div class="panel-body">
+        Mihomo 作为 Clash Premium 的开源替代品，移除了闭源依赖并优化了内存管理。它支持更多自定义规则和插件扩展，对开发者更友好，同时保持与 Clash 配置完全兼容。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -469,16 +469,16 @@ sudo ufw </span><span><span class="hljs-built_in">disable</span></span><span>
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2026-8-24-clash-node.htm" title="PC梯子 | 8月24日21.7M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月24日21.7M/S|免费SSR节点/Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-28-clash-v2ray-ss-ssr.htm" title="PC梯子 | 8月28日21.6M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月28日21.6M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-12-free-ssr-subscribe.htm" title="PC梯子 | 8月12日19.6M/S|免费Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月12日19.6M/S|免费Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-26-clash-node.htm" title="PC梯子 | 7月26日19.3M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 7月26日19.3M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-5.htm" title="PC梯子 | 8月5日19.8M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月5日19.8M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-8-17.htm" title="PC梯子 | 8月17日21.5M/S|免费V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月17日21.5M/S|免费V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-1.htm" title="PC梯子 | 8月1日21.8M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月1日21.8M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-22-free-clash.htm" title="PC梯子 | 7月22日20.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 7月22日20.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-2-free-v2ray.htm" title="PC梯子 | 8月2日19.1M/S|免费Shadowrocket节点/Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月2日19.1M/S|免费Shadowrocket节点/Clash节点/SSR节点/Trojan节点/V2ray节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-8-21.htm" title="PC梯子 | 8月21日21.5M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月21日21.5M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-8-13.htm" title="PC梯子 | 8月13日19.5M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月13日19.5M/S|免费Shadowrocket节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-9-5.htm" title="PC梯子 | 9月5日18.9M/S|免费Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 9月5日18.9M/S|免费Clash节点/V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-22-clash-node-daily-updates.htm" title="PC梯子 | 8月22日20.2M/S|免费Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月22日20.2M/S|免费Trojan节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-free-v2ray.htm" title="PC梯子 | 8月20日22.2M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月20日22.2M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-31.htm" title="PC梯子 | 8月31日20.7M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月31日20.7M/S|免费Clash节点/SSR节点/Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-3.htm" title="PC梯子 | 9月3日18.5M/S|免费Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 9月3日18.5M/S|免费Clash节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-7.htm" title="PC梯子 | 9月7日20.5M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 9月7日20.5M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-8-clash-node.htm" title="PC梯子 | 9月8日22.6M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 9月8日22.6M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-6-free-clash.htm" title="PC梯子 | 8月6日19.3M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐">PC梯子 | 8月6日19.3M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点节点推荐，在线Clash机场梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -490,13 +490,10 @@ sudo ufw </span><span><span class="hljs-built_in">disable</span></span><span>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
